@@ -1,0 +1,13 @@
+.nextflow*
+work/
+results/
+databases/
+reference/
+*.vcf.gz
+*.tbi
+*.csi
+*.bcf
+params.json
+params/
+.env
+.DS_Store

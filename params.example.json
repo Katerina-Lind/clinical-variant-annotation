@@ -1,0 +1,22 @@
+{
+    "proband": "PROBAND_ID",
+    "mother": "MOTHER_ID",
+    "father": "FATHER_ID",
+    "sample_name": "SAMPLE_ID",
+
+    "vcf": "s3://YOUR_BUCKET/input/trio.vcf.gz",
+    "vcf_index": "s3://YOUR_BUCKET/input/trio.vcf.gz.tbi",
+
+    "fasta": "s3://YOUR_BUCKET/reference/GRCh38.fasta",
+    "fai": "s3://YOUR_BUCKET/reference/GRCh38.fasta.fai",
+
+    "cache": "s3://YOUR_BUCKET/vep/release-116/",
+
+    "clinvar": "s3://YOUR_BUCKET/clinvar/clinvar.vcf.gz",
+    "clinvar_index": "s3://YOUR_BUCKET/clinvar/clinvar.vcf.gz.tbi",
+
+    "vep_release": "116",
+    "region": null,
+
+    "outdir": "s3://YOUR_BUCKET/results/clinical/"
+}
