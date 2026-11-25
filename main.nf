@@ -141,7 +141,7 @@ process QC {
     path original_evidence
     path prep_report
     path stats
-    path log
+    path vep_log
     output:
     path "${params.sample_name}.clinical.GRCh38.vcf.gz"
     path "${params.sample_name}.clinical.GRCh38.vcf.gz.tbi"
@@ -174,7 +174,7 @@ process QC {
     cp -L '${inheritance}' '${params.sample_name}.inheritance.tsv.gz'
     cp -L '${original_evidence}' '${params.sample_name}.original_trio_evidence.tsv.gz'
     cp -L '${stats}' clinical_vep.html
-    cp -L '${log}' clinical_vep.log
+    cp -L '${vep_log}' clinical_vep.log
     cp -L '${prep_report}' clinical_prepare.txt
     """
 }
