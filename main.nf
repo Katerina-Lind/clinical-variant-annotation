@@ -3,7 +3,7 @@ nextflow.enable.dsl=2
 
 process PREPARE {
     tag "${params.sample_name}"
-    container params.bcftools_image
+    container 'quay.io/biocontainers/bcftools:1.22--h3a4d415_1'
 
     input:
     path vcf
@@ -101,7 +101,7 @@ process PREPARE {
 
 process ANNOTATE {
     tag "${params.proband}"
-    container params.vep_image
+    container 'ensemblorg/ensembl-vep:release_116.0'
     input:
     path vcf
     path idx
@@ -131,7 +131,7 @@ process ANNOTATE {
 
 process QC {
     tag "${params.proband}"
-    container params.bcftools_image
+    container 'quay.io/biocontainers/bcftools:1.22--h3a4d415_1'
     publishDir params.outdir, mode: 'copy'
     input:
     path original
